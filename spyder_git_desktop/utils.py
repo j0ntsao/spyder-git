@@ -15,13 +15,24 @@ except Exception:  # standalone / tests
         return text
 
 
+def _icon_colors():
+    """(normal, disabled) icon colors that match the active theme."""
+    try:  # inside Spyder: use its theme-aware palette
+        from spyder.utils.palette import SpyderPalette
+
+        return SpyderPalette.ICON_1, SpyderPalette.COLOR_DISABLED
+    except Exception:  # standalone: fall back to Qt's palette
+        pal = QApplication.palette()
+        return pal.color(QPalette.ButtonText), pal.color(QPalette.Disabled, QPalette.ButtonText)
+
+
 def icon(name: str) -> QIcon:
-    """A qtawesome icon coloured for the current (light or dark) palette."""
+    """A qtawesome icon coloured for the current (light or dark) theme."""
     try:
         import qtawesome as qta
 
-        color = QApplication.palette().color(QPalette.ButtonText)
-        return qta.icon(name, color=color)
+        color, disabled = _icon_colors()
+        return qta.icon(name, color=color, color_disabled=disabled)
     except Exception:
         return QIcon()
 
