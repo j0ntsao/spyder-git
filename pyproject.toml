@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spyder-git-desktop"
+version = "0.1.0"
+description = "A GitHub Desktop-style version control pane for Spyder 6"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["spyder>=6.0.0,<7"]
+
+[project.entry-points."spyder.plugins"]
+git_desktop = "spyder_git_desktop.spyder.plugin:GitDesktop"
+
+[tool.setuptools.packages.find]
+include = ["spyder_git_desktop*"]

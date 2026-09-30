@@ -1,0 +1,2 @@
+[spyder.plugins]
+git_desktop = spyder_git_desktop.spyder.plugin:GitDesktop

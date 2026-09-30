@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+spyder_git_desktop/__init__.py
+spyder_git_desktop/git_backend.py
+spyder_git_desktop/github_auth.py
+spyder_git_desktop/panel.py
+spyder_git_desktop/utils.py
+spyder_git_desktop.egg-info/PKG-INFO
+spyder_git_desktop.egg-info/SOURCES.txt
+spyder_git_desktop.egg-info/dependency_links.txt
+spyder_git_desktop.egg-info/entry_points.txt
+spyder_git_desktop.egg-info/requires.txt
+spyder_git_desktop.egg-info/top_level.txt
+spyder_git_desktop/spyder/__init__.py
+spyder_git_desktop/spyder/plugin.py
+spyder_git_desktop/spyder/widgets.py
