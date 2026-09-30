@@ -1,6 +1,6 @@
 # Spyder Git Desktop
 
-A GitHub Desktop-style version control pane for **Spyder 6**.
+A vibe coded GitHub Desktop-style version control pane for **Spyder 6**.
 
 ## Features
 - **Changes**: file list with checkboxes (commit only what you tick), coloured diff viewer, summary + description, "Commit N files to *branch*"
